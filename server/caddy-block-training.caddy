@@ -1,0 +1,4 @@
+# Return 403 to AI training crawlers. Generated from bots.json; search, AI search and live-fetch bots are untouched.
+# Import inside a site block.
+@trainingbots header_regexp User-Agent "(?i)(GPTBot|ClaudeBot|anthropic-ai|meta-externalagent|Amazonbot|MistralAI-Training|Bytespider|CCBot|cohere-training-data-crawler|cohere-ai|DeepSeekBot|Qwenbot|ChatGLM-Spider|KimiBot|MoonshotBot|ElevenlabsCrawler|AI2Bot)"
+respond @trainingbots 403

@@ -1,0 +1,4 @@
+# Return 403 to AI training crawlers. Generated from bots.json; search, AI search and live-fetch bots are untouched.
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (GPTBot|ClaudeBot|anthropic-ai|meta-externalagent|Amazonbot|MistralAI-Training|Bytespider|CCBot|cohere-training-data-crawler|cohere-ai|DeepSeekBot|Qwenbot|ChatGLM-Spider|KimiBot|MoonshotBot|ElevenlabsCrawler|AI2Bot) [NC]
+RewriteRule ^ - [F,L]

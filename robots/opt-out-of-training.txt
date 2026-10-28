@@ -1,0 +1,23 @@
+# Stay in search and AI answers, opt out of model training.
+# Generated from bots.json; every other bot falls through to the * group.
+
+User-agent: Applebot-Extended
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+User-agent: MistralAI-Training
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: cohere-training-data-crawler
+User-agent: DeepSeekBot
+User-agent: Qwenbot
+User-agent: ChatGLM-Spider
+User-agent: KimiBot
+User-agent: ElevenlabsCrawler
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: *
+Allow: /

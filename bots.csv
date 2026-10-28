@@ -1,0 +1,100 @@
+token,name,operator,purpose,description,robotsTxt,verify,docs,status,detectable,pattern,checked
+ChatGPT-User,ChatGPT-User,OpenAI,user,Opens a page when a ChatGPT user asks about it or clicks a link.,ignores,ip-json https://openai.com/chatgpt-user.json,https://platform.openai.com/docs/bots,documented,true,ChatGPT-User,2026-10-28
+ChatGPT Agent,ChatGPT Agent,OpenAI,user,"ChatGPT's agent mode, a remote browser that does tasks for a user.",unknown,signature https://chatgpt.com,https://help.openai.com/en/articles/11845367,documented,false,,2026-10-28
+Claude Code,Claude Code,Anthropic,user,"Anthropic's coding agent, fetching docs and pages for a developer.",unknown,none,https://code.claude.com/docs/en/tools-reference,documented,true,claude-code,2026-10-28
+Claude-User,Claude-User,Anthropic,user,Opens a page when a Claude user asks about it.,respects,ip-json https://claude.com/crawling/bots.json,https://support.claude.com/en/articles/8896518,documented,true,Claude-User,2026-10-28
+Perplexity-User,Perplexity-User,Perplexity,user,Opens a page when a Perplexity user asks about it.,ignores,ip-json https://www.perplexity.com/perplexity-user.json,https://docs.perplexity.ai/guides/bots,documented,true,Perplexity-User,2026-10-28
+Gemini-Deep-Research,Gemini-Deep-Research,Google,user,Reads pages for Gemini Deep Research reports.,unknown,none,,undocumented,true,Gemini-Deep-Research,2026-10-28
+Google-Agent,Google-Agent,Google,user,Google's browsing agent doing tasks for a user (Project Mariner).,ignores,ip-json https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers,documented,true,Google-Agent,2026-10-28
+GoogleAgent-URLContext,GoogleAgent-URLContext,Google,user,Reads pages a developer's app hands to the Gemini API as URL context.,unknown,none,,undocumented,true,GoogleAgent-URLContext,2026-10-28
+Google-GeminiNotebook,Google-GeminiNotebook,Google,user,Reads a page a user adds as a source in Gemini Notebook (formerly NotebookLM).,ignores,ip-json https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers,documented,true,Google-GeminiNotebook|Google-NotebookLM,2026-10-28
+MistralAI-User,MistralAI-User,Mistral,user,Opens a page when a Le Chat user asks about it.,respects,ip-json https://mistral.ai/mistralai-user-ips.json,https://docs.mistral.ai/robots,documented,true,MistralAI-User,2026-10-28
+DuckAssistBot,DuckAssistBot,DuckDuckGo,user,Fetches pages for DuckDuckGo's Search Assist answers.,respects,ip-json https://duckduckgo.com/duckassistbot.json,https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot,documented,true,DuckAssistBot,2026-10-28
+Meta-ExternalFetcher,Meta-ExternalFetcher,Meta,user,Opens links users share with Meta AI.,ignores,none,https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/,documented,true,meta-externalfetcher,2026-10-28
+Amzn-User,Amzn-User,Amazon,user,Fetches pages live for Alexa+ and Amazon's assistants.,ignores,none,https://developer.amazon.com/amazonbot,documented,true,Amzn-User,2026-10-28
+Diffbot-User,Diffbot-User,Diffbot,user,Diffbot fetching a page because a person asked it to.,unknown,none,https://www.diffbot.com/docs/crawl/faq/robots-txt,documented,true,Diffbot-User,2026-10-28
+Kimi-User,Kimi-User,Moonshot AI,user,Opens a page when a Kimi user asks about it.,ignores,ip-json https://www.kimi.com/policies/kimi-user.json,https://kimi.com/policies/kimi-crawlers,documented,true,Kimi-User,2026-10-28
+Shap-User,Shap-User,Parallel,user,Parallel's API fetching a page for a customer's agent.,ignores,none,https://parallel.ai/parallel-web-systems-bots,documented,true,Shap-User,2026-10-28
+ExaUser,ExaUser,Exa,user,Exa's API fetching a page live for a customer's query.,unknown,none,https://crawler.exa.ai/,documented,true,ExaUser,2026-10-28
+kagi-fetcher,kagi-fetcher,Kagi,user,Reads a page for Kagi Assistant and the Kagi summarizer.,unknown,none,,undocumented,true,kagi-fetcher,2026-10-28
+GrokBot,GrokBot,xAI,user,Opens a page when a Grok user asks about it.,unknown,none,,undocumented,true,GrokBot|grok-agent|xAI-Grok,2026-10-28
+Codex,Codex,OpenAI,user,"OpenAI's coding agent, fetching pages for a developer.",unknown,none,,undocumented,false,,2026-10-28
+Cursor,Cursor,Anysphere,user,"Cursor's coding agent, fetching docs for a developer.",unknown,none,,undocumented,false,,2026-10-28
+GitHub Copilot,GitHub Copilot,GitHub,user,"GitHub Copilot's agent, fetching docs for a developer.",unknown,none,,undocumented,false,,2026-10-28
+Devin,Devin,Cognition,user,"Cognition's coding agent, browsing for a developer.",unknown,none,,undocumented,false,,2026-10-28
+Gemini CLI,Gemini CLI,Google,user,"Google's command-line coding agent, fetching pages for a developer.",unknown,none,,undocumented,true,Gemini-CLI|GeminiCLI,2026-10-28
+Trae,Trae,ByteDance,user,"ByteDance's coding IDE agent, fetching docs for a developer.",unknown,none,,undocumented,true,Trae-Agent,2026-10-28
+OpenCode,OpenCode,Anomaly,user,"Open-source coding agent, fetching docs for a developer.",unknown,none,,undocumented,true,\bopencode\b,2026-10-28
+qodercli,qodercli,Alibaba (Qoder),user,"Alibaba's Qoder CLI coding agent, fetching docs for a developer.",unknown,none,,undocumented,true,qodercli,2026-10-28
+OAI-SearchBot,OAI-SearchBot,OpenAI,search,Builds the index behind ChatGPT search results and citations.,respects,ip-json https://openai.com/searchbot.json,https://platform.openai.com/docs/bots,documented,true,OAI-SearchBot,2026-10-28
+Claude-SearchBot,Claude-SearchBot,Anthropic,search,Builds the index behind Claude's search results and citations.,respects,ip-json https://claude.com/crawling/bots.json,https://support.claude.com/en/articles/8896518,documented,true,Claude-SearchBot,2026-10-28
+PerplexityBot,PerplexityBot,Perplexity,search,Builds the index behind Perplexity's answers and citations.,respects,ip-json https://www.perplexity.com/perplexitybot.json,https://docs.perplexity.ai/guides/bots,documented,true,PerplexityBot,2026-10-28
+Google-CloudVertexBot,Google-CloudVertexBot,Google,search,Crawls a site for Vertex AI Search agents its owner builds on it.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Google-CloudVertexBot,2026-10-28
+bedrockbot,Amazon Bedrock crawlers,Amazon,search,Crawls pages for Amazon Bedrock knowledge bases a company sets up.,respects,none,https://docs.aws.amazon.com/bedrock/latest/userguide/webcrawl-data-source-connector.html,documented,true,bedrockbot|amazon-bedrock-knowledgebase,2026-10-28
+Amzn-SearchBot,Amzn-SearchBot,Amazon,search,Search index for Alexa+ and Amazon's AI experiences.,respects,none,https://developer.amazon.com/amazonbot,documented,true,Amzn-SearchBot,2026-10-28
+AzureAI-SearchBot,AzureAI-SearchBot,Microsoft,search,Index that grounds Azure AI services and Microsoft AI agents.,unknown,none,,undocumented,true,AzureAI-SearchBot,2026-10-28
+meta-webindexer,meta-webindexer,Meta,search,Search index for Meta AI.,respects,none,https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/,documented,true,meta-webindexer,2026-10-28
+MistralAI-Index,MistralAI-Index,Mistral,search,Search index for Mistral's Le Chat.,respects,ip-json https://mistral.ai/mistralai-index-ips.json,https://docs.mistral.ai/robots,documented,true,MistralAI-Index,2026-10-28
+Diffbot,Diffbot,Diffbot,search,"Builds Diffbot's Knowledge Graph and web data, sold to AI products.",respects,none,https://www.diffbot.com/docs/crawl/faq/robots-txt,documented,true,Diffbot,2026-10-28
+xAI-SearchBot,xAI-SearchBot,xAI,search,Search index for Grok.,unknown,none,,undocumented,true,xAI-SearchBot,2026-10-28
+Kimi-SearchBot,Kimi-SearchBot,Moonshot AI,search,Search index for Moonshot's Kimi.,respects,ip-json https://www.kimi.com/policies/kimi-searchbot.json,https://kimi.com/policies/kimi-crawlers,documented,true,Kimi-SearchBot,2026-10-28
+Dola-SearchBot,Dola-SearchBot,ByteDance,search,Search index for ByteDance's Dola (Doubao).,unknown,none,,undocumented,true,Dola-SearchBot,2026-10-28
+YandexAdditional,YandexAdditional,Yandex,search,Feeds YandexGPT answers in Yandex Search.,token-only,none,https://yandex.ru/support/webmaster/en/search-appearance/fast.html,documented,true,YandexAdditional,2026-10-28
+ExaSearchBot,ExaSearchBot,Exa,search,"Crawler for Exa's search API, used by many AI apps and agents.",respects,none,https://crawler.exa.ai/,documented,true,ExaSearchBot,2026-10-28
+ExaBot,ExaBot,Exa,search,Exa's older search crawler.,unknown,none,,undocumented,true,ExaBot|crawler\.exa\.ai,2026-10-28
+TavilyBot,TavilyBot,Tavily,search,Crawler for Tavily's search API for AI agents.,unknown,none,,undocumented,true,TavilyBot,2026-10-28
+LinkupBot,LinkupBot,Linkup,search,Crawler for Linkup's search API for AI apps.,respects,none,https://linkup.so/bot,documented,true,LinkupBot,2026-10-28
+ShapBot,ShapBot,Parallel,search,Crawler for Parallel's search API for AI agents.,respects,ip-json https://docs.parallel.ai/resources/shapbot.json,https://docs.parallel.ai/resources/crawler,documented,true,ShapBot,2026-10-28
+YouBot,YouBot,You.com,search,Crawler for You.com search and its search API.,respects,none,https://docs.you.com/youbot,documented,true,YouBot,2026-10-28
+Bravebot,Bravebot,Brave,search,"Crawler for Brave Search, its AI answers and the Brave Search API.",unknown,none,,undocumented,true,Bravebot,2026-10-28
+Googlebot-Image,Googlebot-Image,Google,seo,"Crawls images for Google Images, Discover and image features in Search.",respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Googlebot-Image,2026-10-28
+Googlebot-Video,Googlebot-Video,Google,seo,Crawls video for video features in Google Search.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Googlebot-Video,2026-10-28
+Googlebot-News,Googlebot-News,Google,seo,"Crawls for Google News and news.google.com, as Googlebot.",respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,false,,2026-10-28
+GoogleOther,GoogleOther,Google,seo,Google's generic crawler for product teams and research.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,GoogleOther,2026-10-28
+Googlebot,Googlebot,Google,seo,Google Search's main crawler. Also feeds AI Overviews and AI Mode.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Googlebot,2026-10-28
+Google-InspectionTool,Google-InspectionTool,Google,seo,Search Console URL Inspection and the Rich Results Test.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Google-InspectionTool,2026-10-28
+Storebot-Google,Storebot-Google,Google,seo,Crawls product pages for Google Shopping.,respects,ip-json https://developers.google.com/static/crawling/ipranges/common-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Storebot-Google,2026-10-28
+Bingbot,Bingbot,Microsoft,seo,Bing's crawler. Also feeds Microsoft Copilot and engines built on Bing.,respects,ip-json https://www.bing.com/toolbox/bingbot.json,https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0,documented,true,bingbot,2026-10-28
+Applebot-Extended,Applebot-Extended,Apple,training,robots.txt token for Apple Intelligence training. Applebot does the fetching.,token-only,none,https://support.apple.com/en-us/119829,documented,true,Applebot-Extended,2026-10-28
+Applebot,Applebot,Apple,seo,"Apple's crawler for Siri, Spotlight and Safari suggestions.",respects,ip-json https://search.developer.apple.com/applebot.json,https://support.apple.com/en-us/119829,documented,true,Applebot,2026-10-28
+DuckDuckBot,DuckDuckBot,DuckDuckGo,seo,DuckDuckGo's own crawler. Most of its results come from Bing.,respects,ip-json https://duckduckgo.com/duckduckbot.json,https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot,documented,true,DuckDuckBot,2026-10-28
+YandexBot,YandexBot,Yandex,seo,Yandex Search crawler.,respects,reverse-dns,https://yandex.com/support/webmaster/robot-workings/check-yandex-robots.html,documented,true,YandexBot|YandexMobileBot|YandexRenderResourcesBot,2026-10-28
+Slurp,Yahoo Slurp,Yahoo,seo,Yahoo Search crawler.,respects,none,https://help.yahoo.com/kb/SLN22600.html,documented,true,Slurp,2026-10-28
+Baiduspider,Baiduspider,Baidu,seo,Baidu Search crawler.,respects,reverse-dns,https://help.baidu.com/question?prod_id=99&class=0&id=3001,documented,true,Baiduspider,2026-10-28
+Yeti,Yeti,Naver,seo,Naver Search crawler (South Korea).,respects,reverse-dns,https://searchadvisor.naver.com/guide/seo-basic-firewall,documented,true,\bYeti/,2026-10-28
+SeznamBot,SeznamBot,Seznam,seo,Seznam Search crawler (Czech Republic).,respects,reverse-dns,https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/,documented,true,SeznamBot,2026-10-28
+PetalBot,PetalBot,Huawei,seo,Huawei's crawler for Petal Search and Huawei Assistant.,respects,reverse-dns,https://webmaster.petalsearch.com/site/petalbot,documented,true,PetalBot,2026-10-28
+MojeekBot,MojeekBot,Mojeek,seo,"Mojeek's crawler, an independent search index.",respects,none,https://www.mojeek.com/bot.html,documented,true,MojeekBot,2026-10-28
+Qwantbot,Qwantbot,Qwant,seo,"Qwant's crawler, also feeding the European Search Perspective index.",respects,none,https://help.qwant.com/bot/,documented,true,Qwantbot,2026-10-28
+Y!J,Yahoo Japan (Y!J),LY Corporation (Yahoo Japan),seo,Yahoo! JAPAN Search crawler.,unknown,none,https://support.yahoo-net.jp/PccSearch/s/article/H000007955,documented,true,Y!J-,2026-10-28
+coccocbot,coccocbot,Coc Coc,seo,Coc Coc Search crawler (Vietnam).,respects,none,http://help.coccoc.com/searchengine,documented,true,coccocbot,2026-10-28
+Kagibot,Kagibot,Kagi,seo,Kagi Search's own index crawler.,respects,none,https://kagi.com/bot,documented,true,Kagibot,2026-10-28
+GPTBot,GPTBot,OpenAI,training,Collects pages to train OpenAI's models.,respects,ip-json https://openai.com/gptbot.json,https://platform.openai.com/docs/bots,documented,true,GPTBot,2026-10-28
+ClaudeBot,ClaudeBot,Anthropic,training,Collects pages to train Anthropic's models.,respects,ip-json https://claude.com/crawling/bots.json,https://support.claude.com/en/articles/8896518,documented,true,ClaudeBot|anthropic-ai,2026-10-28
+Google-Extended,Google-Extended,Google,training,robots.txt token for Gemini and Vertex AI training and grounding. Googlebot does the fetching.,token-only,none,https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers,documented,true,Google-Extended,2026-10-28
+Meta-ExternalAgent,Meta-ExternalAgent,Meta,training,"Collects pages to train Meta's AI models, plus some product indexing.",respects,none,https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/,documented,true,meta-externalagent,2026-10-28
+Amazonbot,Amazonbot,Amazon,training,"Amazon's crawler for its products and services, model training included.",respects,none,https://developer.amazon.com/amazonbot,documented,true,Amazonbot,2026-10-28
+MistralAI-Training,MistralAI-Training,Mistral,training,Collects pages for Mistral's training datasets.,respects,none,https://docs.mistral.ai/robots,documented,true,MistralAI-Training,2026-10-28
+Bytespider,Bytespider,ByteDance,training,Collects pages to train ByteDance's models (Doubao).,unknown,none,,undocumented,true,Bytespider,2026-10-28
+CCBot,CCBot,Common Crawl,training,"Common Crawl, the open web archive most AI labs train on.",respects,ip-json https://index.commoncrawl.org/ccbot.json,https://commoncrawl.org/ccbot,documented,true,CCBot,2026-10-28
+cohere-training-data-crawler,Cohere,Cohere,training,Collects pages to train Cohere's models.,unknown,none,,undocumented,true,cohere-training-data-crawler|cohere-ai,2026-10-28
+DeepSeekBot,DeepSeekBot,DeepSeek,training,DeepSeek's crawler for its models.,unknown,none,,undocumented,true,DeepSeekBot,2026-10-28
+Qwenbot,Qwenbot,Alibaba,training,Alibaba's crawler for its Qwen models.,unknown,none,,undocumented,true,Qwenbot,2026-10-28
+ChatGLM-Spider,ChatGLM-Spider,Zhipu AI,training,Zhipu AI's crawler for its GLM models.,unknown,none,,undocumented,true,ChatGLM-Spider,2026-10-28
+KimiBot,KimiBot,Moonshot AI,training,Moonshot AI's crawler for its Kimi models.,respects,ip-json https://www.kimi.com/policies/kimibot.json,https://kimi.com/policies/kimi-crawlers,documented,true,KimiBot|MoonshotBot,2026-10-28
+ElevenlabsCrawler,ElevenlabsCrawler,ElevenLabs,training,ElevenLabs' crawler for its models and agents.,respects,none,https://elevenlabs.io/docs/bots,documented,true,ElevenlabsCrawler,2026-10-28
+AI2Bot,AI2Bot,Ai2,training,Ai2's crawler for its open models and datasets (Dolma).,respects,none,https://allenai.org/crawler,documented,true,AI2Bot,2026-10-28
+AhrefsBot,AhrefsBot,Ahrefs,tool,Ahrefs' backlink and SEO index.,respects,none,https://ahrefs.com/robot,documented,true,AhrefsBot,2026-10-28
+SemrushBot,SemrushBot,Semrush,tool,Semrush's backlink and SEO data.,respects,none,https://www.semrush.com/bot/,documented,true,SemrushBot,2026-10-28
+SiteAuditBot,SiteAuditBot,Semrush,tool,"Semrush Site Audit, run by a Semrush user.",respects,none,https://www.semrush.com/bot/,documented,true,SiteAuditBot,2026-10-28
+MJ12bot,MJ12bot,Majestic,tool,Majestic's backlink index.,respects,none,https://mj12bot.com/,documented,true,MJ12bot,2026-10-28
+DotBot,DotBot,Moz,tool,Moz's link index.,respects,none,https://moz.com/help/moz-procedures/crawlers/dotbot,documented,true,DotBot,2026-10-28
+DataForSeoBot,DataForSeoBot,DataForSEO,tool,DataForSEO's backlink and SEO data APIs.,respects,none,https://dataforseo.com/dataforseo-bot,documented,true,DataForSeoBot,2026-10-28
+Screaming Frog SEO Spider,Screaming Frog SEO Spider,Screaming Frog,tool,"Screaming Frog, a desktop crawler run by an SEO.",respects,none,https://www.screamingfrog.co.uk/seo-spider/,documented,true,Screaming Frog SEO Spider,2026-10-28
+SERankingBacklinksBot,SERankingBacklinksBot,SE Ranking,tool,SE Ranking's backlink index.,respects,none,https://seranking.com/backlinks-crawler,documented,true,SERanking,2026-10-28
+Scrunchbot,Scrunchbot,Scrunch,tool,Scrunch's AI visibility monitoring.,respects,none,https://scrunchai.com/bots,documented,true,Scrunchbot,2026-10-28
+Qwairy-Bot,Qwairy-Bot,Qwairy,tool,Qwairy's AI visibility monitoring.,unknown,none,,undocumented,true,Qwairy-Bot,2026-10-28
+KimeBot,KimeBot,KIME,tool,KIME's AI visibility monitoring.,unknown,none,,undocumented,true,KimeBot,2026-10-28
+AdsBot-Google,AdsBot-Google,Google,ads,Checks landing page quality for Google Ads.,respects,ip-json https://developers.google.com/static/crawling/ipranges/special-crawlers.json,https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers,documented,true,AdsBot-Google,2026-10-28
+Meta-ExternalAds,Meta-ExternalAds,Meta,ads,Meta's crawler for its ads and business products.,respects,none,https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/,documented,true,meta-externalads,2026-10-28
+OAI-AdsBot,OAI-AdsBot,OpenAI,ads,Checks landing pages for ChatGPT ads.,unknown,ip-json https://openai.com/adsbot.json,https://platform.openai.com/docs/bots,documented,true,OAI-AdsBot,2026-10-28

@@ -1,0 +1,1883 @@
+[
+  {
+    "token": "ChatGPT-User",
+    "pattern": "ChatGPT-User",
+    "order": 10,
+    "name": "ChatGPT-User",
+    "operator": "OpenAI",
+    "purpose": "user",
+    "description": "Opens a page when a ChatGPT user asks about it or clicks a link.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://openai.com/chatgpt-user.json"
+    },
+    "docs": "https://platform.openai.com/docs/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ChatGPT Agent",
+    "pattern": "",
+    "order": 20,
+    "name": "ChatGPT Agent",
+    "operator": "OpenAI",
+    "purpose": "user",
+    "description": "ChatGPT's agent mode, a remote browser that does tasks for a user.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "signature",
+      "url": "https://chatgpt.com"
+    },
+    "docs": "https://help.openai.com/en/articles/11845367",
+    "status": "documented",
+    "detectable": false,
+    "sampleUA": "",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Claude Code",
+    "pattern": "claude-code",
+    "order": 30,
+    "name": "Claude Code",
+    "operator": "Anthropic",
+    "purpose": "user",
+    "description": "Anthropic's coding agent, fetching docs and pages for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://code.claude.com/docs/en/tools-reference",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Claude-User (claude-code/2.1.300; +https://support.anthropic.com/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Claude-User",
+    "pattern": "Claude-User",
+    "order": 40,
+    "name": "Claude-User",
+    "operator": "Anthropic",
+    "purpose": "user",
+    "description": "Opens a page when a Claude user asks about it.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://claude.com/crawling/bots.json"
+    },
+    "docs": "https://support.claude.com/en/articles/8896518",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0; +Claude-User@anthropic.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Perplexity-User",
+    "pattern": "Perplexity-User",
+    "order": 50,
+    "name": "Perplexity-User",
+    "operator": "Perplexity",
+    "purpose": "user",
+    "description": "Opens a page when a Perplexity user asks about it.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.perplexity.com/perplexity-user.json"
+    },
+    "docs": "https://docs.perplexity.ai/guides/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Gemini-Deep-Research",
+    "pattern": "Gemini-Deep-Research",
+    "order": 60,
+    "name": "Gemini-Deep-Research",
+    "operator": "Google",
+    "purpose": "user",
+    "description": "Reads pages for Gemini Deep Research reports.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Gemini-Deep-Research; +https://gemini.google/overview/deep-research/) Chrome/135.0.0.0 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Google-Agent",
+    "pattern": "Google-Agent",
+    "order": 70,
+    "name": "Google-Agent",
+    "operator": "Google",
+    "purpose": "user",
+    "description": "Google's browsing agent doing tasks for a user (Project Mariner).",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent) Chrome/W.X.Y.Z Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "GoogleAgent-URLContext",
+    "pattern": "GoogleAgent-URLContext",
+    "order": 80,
+    "name": "GoogleAgent-URLContext",
+    "operator": "Google",
+    "purpose": "user",
+    "description": "Reads pages a developer's app hands to the Gemini API as URL context.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "GoogleAgent-URLContext",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Google-GeminiNotebook",
+    "pattern": "Google-GeminiNotebook|Google-NotebookLM",
+    "order": 90,
+    "name": "Google-GeminiNotebook",
+    "operator": "Google",
+    "purpose": "user",
+    "description": "Reads a page a user adds as a source in Gemini Notebook (formerly NotebookLM).",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 (compatible; Google-GeminiNotebook; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-gemininotebook)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "MistralAI-User",
+    "pattern": "MistralAI-User",
+    "order": 100,
+    "name": "MistralAI-User",
+    "operator": "Mistral",
+    "purpose": "user",
+    "description": "Opens a page when a Le Chat user asks about it.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://mistral.ai/mistralai-user-ips.json"
+    },
+    "docs": "https://docs.mistral.ai/robots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-User/1.0; +https://docs.mistral.ai/robots)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "DuckAssistBot",
+    "pattern": "DuckAssistBot",
+    "order": 110,
+    "name": "DuckAssistBot",
+    "operator": "DuckDuckGo",
+    "purpose": "user",
+    "description": "Fetches pages for DuckDuckGo's Search Assist answers.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://duckduckgo.com/duckassistbot.json"
+    },
+    "docs": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Meta-ExternalFetcher",
+    "pattern": "meta-externalfetcher",
+    "order": 120,
+    "name": "Meta-ExternalFetcher",
+    "operator": "Meta",
+    "purpose": "user",
+    "description": "Opens links users share with Meta AI.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "meta-externalfetcher/1.1",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Amzn-User",
+    "pattern": "Amzn-User",
+    "order": 130,
+    "name": "Amzn-User",
+    "operator": "Amazon",
+    "purpose": "user",
+    "description": "Fetches pages live for Alexa+ and Amazon's assistants.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developer.amazon.com/amazonbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-User/0.1) Chrome/119.0.6045.214 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Kimi-User",
+    "pattern": "Kimi-User",
+    "order": 140,
+    "name": "Kimi-User",
+    "operator": "Moonshot AI",
+    "purpose": "user",
+    "description": "Opens a page when a Kimi user asks about it.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.kimi.com/policies/kimi-user.json"
+    },
+    "docs": "https://kimi.com/policies/kimi-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Kimi-User/1.0; +https://www.kimi.com/policies/kimi-crawlers",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Shap-User",
+    "pattern": "Shap-User",
+    "order": 150,
+    "name": "Shap-User",
+    "operator": "Parallel",
+    "purpose": "user",
+    "description": "Parallel's API fetching a page for a customer's agent.",
+    "robotsTxt": "ignores",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://parallel.ai/parallel-web-systems-bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Shap-User/0.1.0",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ExaUser",
+    "pattern": "ExaUser",
+    "order": 160,
+    "name": "ExaUser",
+    "operator": "Exa",
+    "purpose": "user",
+    "description": "Exa's API fetching a page live for a customer's query.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://crawler.exa.ai/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ExaUser/1.0; +https://crawler.exa.ai/exauser)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "kagi-fetcher",
+    "pattern": "kagi-fetcher",
+    "order": 170,
+    "name": "kagi-fetcher",
+    "operator": "Kagi",
+    "purpose": "user",
+    "description": "Reads a page for Kagi Assistant and the Kagi summarizer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "kagi-fetcher/1.0",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "GrokBot",
+    "pattern": "GrokBot|grok-agent|xAI-Grok",
+    "order": 180,
+    "name": "GrokBot",
+    "operator": "xAI",
+    "purpose": "user",
+    "description": "Opens a page when a Grok user asks about it.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; GrokBot/1.0; +https://x.ai/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Codex",
+    "pattern": "",
+    "order": 190,
+    "name": "Codex",
+    "operator": "OpenAI",
+    "purpose": "user",
+    "description": "OpenAI's coding agent, fetching pages for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": false,
+    "sampleUA": "",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Cursor",
+    "pattern": "",
+    "order": 200,
+    "name": "Cursor",
+    "operator": "Anysphere",
+    "purpose": "user",
+    "description": "Cursor's coding agent, fetching docs for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": false,
+    "sampleUA": "",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "GitHub Copilot",
+    "pattern": "",
+    "order": 210,
+    "name": "GitHub Copilot",
+    "operator": "GitHub",
+    "purpose": "user",
+    "description": "GitHub Copilot's agent, fetching docs for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": false,
+    "sampleUA": "",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Devin",
+    "pattern": "",
+    "order": 220,
+    "name": "Devin",
+    "operator": "Cognition",
+    "purpose": "user",
+    "description": "Cognition's coding agent, browsing for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": false,
+    "sampleUA": "",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Gemini CLI",
+    "pattern": "Gemini-CLI|GeminiCLI",
+    "order": 230,
+    "name": "Gemini CLI",
+    "operator": "Google",
+    "purpose": "user",
+    "description": "Google's command-line coding agent, fetching pages for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Google-Gemini-CLI/1.0; +https://github.com/google-gemini/gemini-cli)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Trae",
+    "pattern": "Trae-Agent",
+    "order": 240,
+    "name": "Trae",
+    "operator": "ByteDance",
+    "purpose": "user",
+    "description": "ByteDance's coding IDE agent, fetching docs for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Trae-Agent",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "OpenCode",
+    "pattern": "\\bopencode\\b",
+    "order": 250,
+    "name": "OpenCode",
+    "operator": "Anomaly",
+    "purpose": "user",
+    "description": "Open-source coding agent, fetching docs for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "opencode",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "qodercli",
+    "pattern": "qodercli",
+    "order": 260,
+    "name": "qodercli",
+    "operator": "Alibaba (Qoder)",
+    "purpose": "user",
+    "description": "Alibaba's Qoder CLI coding agent, fetching docs for a developer.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "qodercli/1.0.45 (+https://qoder.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "OAI-SearchBot",
+    "pattern": "OAI-SearchBot",
+    "order": 270,
+    "name": "OAI-SearchBot",
+    "operator": "OpenAI",
+    "purpose": "search",
+    "description": "Builds the index behind ChatGPT search results and citations.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://openai.com/searchbot.json"
+    },
+    "docs": "https://platform.openai.com/docs/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Claude-SearchBot",
+    "pattern": "Claude-SearchBot",
+    "order": 280,
+    "name": "Claude-SearchBot",
+    "operator": "Anthropic",
+    "purpose": "search",
+    "description": "Builds the index behind Claude's search results and citations.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://claude.com/crawling/bots.json"
+    },
+    "docs": "https://support.claude.com/en/articles/8896518",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-SearchBot/1.0; +Claude-SearchBot@anthropic.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "PerplexityBot",
+    "pattern": "PerplexityBot",
+    "order": 290,
+    "name": "PerplexityBot",
+    "operator": "Perplexity",
+    "purpose": "search",
+    "description": "Builds the index behind Perplexity's answers and citations.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.perplexity.com/perplexitybot.json"
+    },
+    "docs": "https://docs.perplexity.ai/guides/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Google-CloudVertexBot",
+    "pattern": "Google-CloudVertexBot",
+    "order": 300,
+    "name": "Google-CloudVertexBot",
+    "operator": "Google",
+    "purpose": "search",
+    "description": "Crawls a site for Vertex AI Search agents its owner builds on it.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36 (compatible; Google-CloudVertexBot; +https://cloud.google.com/enterprise-search)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Amzn-SearchBot",
+    "pattern": "Amzn-SearchBot",
+    "order": 310,
+    "name": "Amzn-SearchBot",
+    "operator": "Amazon",
+    "purpose": "search",
+    "description": "Search index for Alexa+ and Amazon's AI experiences.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developer.amazon.com/amazonbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-SearchBot/0.1) Chrome/119.0.6045.214 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "AzureAI-SearchBot",
+    "pattern": "AzureAI-SearchBot",
+    "order": 320,
+    "name": "AzureAI-SearchBot",
+    "operator": "Microsoft",
+    "purpose": "search",
+    "description": "Index that grounds Azure AI services and Microsoft AI agents.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; AzureAI-SearchBot/1.0;",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "meta-webindexer",
+    "pattern": "meta-webindexer",
+    "order": 330,
+    "name": "meta-webindexer",
+    "operator": "Meta",
+    "purpose": "search",
+    "description": "Search index for Meta AI.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "meta-webindexer/1.1",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "MistralAI-Index",
+    "pattern": "MistralAI-Index",
+    "order": 340,
+    "name": "MistralAI-Index",
+    "operator": "Mistral",
+    "purpose": "search",
+    "description": "Search index for Mistral's Le Chat.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://mistral.ai/mistralai-index-ips.json"
+    },
+    "docs": "https://docs.mistral.ai/robots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Index/1.0; +https://docs.mistral.ai/robots)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "xAI-SearchBot",
+    "pattern": "xAI-SearchBot",
+    "order": 350,
+    "name": "xAI-SearchBot",
+    "operator": "xAI",
+    "purpose": "search",
+    "description": "Search index for Grok.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; xAI-SearchBot/1.0; +https://x.ai)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Kimi-SearchBot",
+    "pattern": "Kimi-SearchBot",
+    "order": 360,
+    "name": "Kimi-SearchBot",
+    "operator": "Moonshot AI",
+    "purpose": "search",
+    "description": "Search index for Moonshot's Kimi.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.kimi.com/policies/kimi-searchbot.json"
+    },
+    "docs": "https://kimi.com/policies/kimi-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Kimi-SearchBot/1.0; +https://www.kimi.com/policies/kimi-crawlers",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Dola-SearchBot",
+    "pattern": "Dola-SearchBot",
+    "order": 370,
+    "name": "Dola-SearchBot",
+    "operator": "ByteDance",
+    "purpose": "search",
+    "description": "Search index for ByteDance's Dola (Doubao).",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Dola-SearchBot/1.0)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "YandexAdditional",
+    "pattern": "YandexAdditional",
+    "order": 380,
+    "name": "YandexAdditional",
+    "operator": "Yandex",
+    "purpose": "search",
+    "description": "Feeds YandexGPT answers in Yandex Search.",
+    "robotsTxt": "token-only",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://yandex.ru/support/webmaster/en/search-appearance/fast.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "YandexAdditional",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ExaSearchBot",
+    "pattern": "ExaSearchBot",
+    "order": 390,
+    "name": "ExaSearchBot",
+    "operator": "Exa",
+    "purpose": "search",
+    "description": "Crawler for Exa's search API, used by many AI apps and agents.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://crawler.exa.ai/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ExaSearchBot/1.0; +https://crawler.exa.ai/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ExaBot",
+    "pattern": "ExaBot|crawler\\.exa\\.ai",
+    "order": 400,
+    "name": "ExaBot",
+    "operator": "Exa",
+    "purpose": "search",
+    "description": "Exa's older search crawler.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "ExaBot/1.0 (+https://exa.ai/webmaster)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "TavilyBot",
+    "pattern": "TavilyBot",
+    "order": 410,
+    "name": "TavilyBot",
+    "operator": "Tavily",
+    "purpose": "search",
+    "description": "Crawler for Tavily's search API for AI agents.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; TavilyBot/1.0)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "LinkupBot",
+    "pattern": "LinkupBot",
+    "order": 420,
+    "name": "LinkupBot",
+    "operator": "Linkup",
+    "purpose": "search",
+    "description": "Crawler for Linkup's search API for AI apps.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://linkup.so/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "LinkupBot/1.0 (LinkupBot for web indexing; https://www.linkup.so/bot; bot@linkup.so)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ShapBot",
+    "pattern": "ShapBot",
+    "order": 430,
+    "name": "ShapBot",
+    "operator": "Parallel",
+    "purpose": "search",
+    "description": "Crawler for Parallel's search API for AI agents.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://docs.parallel.ai/resources/shapbot.json"
+    },
+    "docs": "https://docs.parallel.ai/resources/crawler",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ShapBot/0.1.0",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "YouBot",
+    "pattern": "YouBot",
+    "order": 440,
+    "name": "YouBot",
+    "operator": "You.com",
+    "purpose": "search",
+    "description": "Crawler for You.com search and its search API.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://docs.you.com/youbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; YouBot/1.0; +https://docs.you.com/youbot; env:prod) Chrome/X.X.X.X Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Bravebot",
+    "pattern": "Bravebot",
+    "order": 450,
+    "name": "Bravebot",
+    "operator": "Brave",
+    "purpose": "search",
+    "description": "Crawler for Brave Search, its AI answers and the Brave Search API.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Bravebot/1.0; +https://search.brave.com/help/brave-search-crawler) Chrome/131.0.0.0 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Googlebot",
+    "pattern": "Googlebot",
+    "order": 460,
+    "name": "Googlebot",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Google Search's main crawler. Also feeds AI Overviews and AI Mode.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Google-InspectionTool",
+    "pattern": "Google-InspectionTool",
+    "order": 470,
+    "name": "Google-InspectionTool",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Search Console URL Inspection and the Rich Results Test.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Google-InspectionTool/1.0;)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Storebot-Google",
+    "pattern": "Storebot-Google",
+    "order": 480,
+    "name": "Storebot-Google",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Crawls product pages for Google Shopping.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (X11; Linux x86_64; Storebot-Google/1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Bingbot",
+    "pattern": "bingbot",
+    "order": 490,
+    "name": "Bingbot",
+    "operator": "Microsoft",
+    "purpose": "seo",
+    "description": "Bing's crawler. Also feeds Microsoft Copilot and engines built on Bing.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.bing.com/toolbox/bingbot.json"
+    },
+    "docs": "https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Applebot-Extended",
+    "pattern": "Applebot-Extended",
+    "order": 500,
+    "name": "Applebot-Extended",
+    "operator": "Apple",
+    "purpose": "training",
+    "description": "robots.txt token for Apple Intelligence training. Applebot does the fetching.",
+    "robotsTxt": "token-only",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://support.apple.com/en-us/119829",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Applebot-Extended)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Applebot",
+    "pattern": "Applebot",
+    "order": 510,
+    "name": "Applebot",
+    "operator": "Apple",
+    "purpose": "seo",
+    "description": "Apple's crawler for Siri, Spotlight and Safari suggestions.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://search.developer.apple.com/applebot.json"
+    },
+    "docs": "https://support.apple.com/en-us/119829",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "DuckDuckBot",
+    "pattern": "DuckDuckBot",
+    "order": 520,
+    "name": "DuckDuckBot",
+    "operator": "DuckDuckGo",
+    "purpose": "seo",
+    "description": "DuckDuckGo's own crawler. Most of its results come from Bing.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://duckduckgo.com/duckduckbot.json"
+    },
+    "docs": "https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "YandexBot",
+    "pattern": "YandexBot|YandexMobileBot|YandexRenderResourcesBot",
+    "order": 530,
+    "name": "YandexBot",
+    "operator": "Yandex",
+    "purpose": "seo",
+    "description": "Yandex Search crawler.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://yandex.com/support/webmaster/robot-workings/check-yandex-robots.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Baiduspider",
+    "pattern": "Baiduspider",
+    "order": 540,
+    "name": "Baiduspider",
+    "operator": "Baidu",
+    "purpose": "seo",
+    "description": "Baidu Search crawler.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://help.baidu.com/question?prod_id=99&class=0&id=3001",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Yeti",
+    "pattern": "\\bYeti/",
+    "order": 550,
+    "name": "Yeti",
+    "operator": "Naver",
+    "purpose": "seo",
+    "description": "Naver Search crawler (South Korea).",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://searchadvisor.naver.com/guide/seo-basic-firewall",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Yeti/1.1; +https://naver.me/spd)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "SeznamBot",
+    "pattern": "SeznamBot",
+    "order": 560,
+    "name": "SeznamBot",
+    "operator": "Seznam",
+    "purpose": "seo",
+    "description": "Seznam Search crawler (Czech Republic).",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; SeznamBot/4.0; +https://o-seznam.cz/napoveda/vyhledavani/en/seznambot-crawler/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "PetalBot",
+    "pattern": "PetalBot",
+    "order": 570,
+    "name": "PetalBot",
+    "operator": "Huawei",
+    "purpose": "seo",
+    "description": "Huawei's crawler for Petal Search and Huawei Assistant.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://webmaster.petalsearch.com/site/petalbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "MojeekBot",
+    "pattern": "MojeekBot",
+    "order": 580,
+    "name": "MojeekBot",
+    "operator": "Mojeek",
+    "purpose": "seo",
+    "description": "Mojeek's crawler, an independent search index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.mojeek.com/bot.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; MojeekBot/0.11; +https://www.mojeek.com/bot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Qwantbot",
+    "pattern": "Qwantbot",
+    "order": 590,
+    "name": "Qwantbot",
+    "operator": "Qwant",
+    "purpose": "seo",
+    "description": "Qwant's crawler, also feeding the European Search Perspective index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://help.qwant.com/bot/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Qwantbot/1.0; +https://help.qwant.com/bot/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Y!J",
+    "pattern": "Y!J-",
+    "order": 600,
+    "name": "Yahoo Japan (Y!J)",
+    "operator": "LY Corporation (Yahoo Japan)",
+    "purpose": "seo",
+    "description": "Yahoo! JAPAN Search crawler.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://support.yahoo-net.jp/PccSearch/s/article/H000007955",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Y!J-BRW/1.0 (https://support.yahoo-net.jp/PccSearch/s/article/H000007955)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "coccocbot",
+    "pattern": "coccocbot",
+    "order": 610,
+    "name": "coccocbot",
+    "operator": "Coc Coc",
+    "purpose": "seo",
+    "description": "Coc Coc Search crawler (Vietnam).",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "http://help.coccoc.com/searchengine",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; coccocbot-web/1.1; +http://help.coccoc.com/searchengine)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Kagibot",
+    "pattern": "Kagibot",
+    "order": 620,
+    "name": "Kagibot",
+    "operator": "Kagi",
+    "purpose": "seo",
+    "description": "Kagi Search's own index crawler.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://kagi.com/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Kagibot/1.0; +https://kagi.com/bot)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "GPTBot",
+    "pattern": "GPTBot",
+    "order": 630,
+    "name": "GPTBot",
+    "operator": "OpenAI",
+    "purpose": "training",
+    "description": "Collects pages to train OpenAI's models.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://openai.com/gptbot.json"
+    },
+    "docs": "https://platform.openai.com/docs/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ClaudeBot",
+    "pattern": "ClaudeBot|anthropic-ai",
+    "order": 640,
+    "name": "ClaudeBot",
+    "operator": "Anthropic",
+    "purpose": "training",
+    "description": "Collects pages to train Anthropic's models.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://claude.com/crawling/bots.json"
+    },
+    "docs": "https://support.claude.com/en/articles/8896518",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Google-Extended",
+    "pattern": "Google-Extended",
+    "order": 650,
+    "name": "Google-Extended",
+    "operator": "Google",
+    "purpose": "training",
+    "description": "robots.txt token for Gemini and Vertex AI training and grounding. Googlebot does the fetching.",
+    "robotsTxt": "token-only",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Google-Extended)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Meta-ExternalAgent",
+    "pattern": "meta-externalagent",
+    "order": 660,
+    "name": "Meta-ExternalAgent",
+    "operator": "Meta",
+    "purpose": "training",
+    "description": "Collects pages to train Meta's AI models, plus some product indexing.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "meta-externalagent/1.1",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Amazonbot",
+    "pattern": "Amazonbot",
+    "order": 670,
+    "name": "Amazonbot",
+    "operator": "Amazon",
+    "purpose": "training",
+    "description": "Amazon's crawler for its products and services, model training included.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developer.amazon.com/amazonbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot) Chrome/119.0.6045.214 Safari/537.36",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Bytespider",
+    "pattern": "Bytespider",
+    "order": 680,
+    "name": "Bytespider",
+    "operator": "ByteDance",
+    "purpose": "training",
+    "description": "Collects pages to train ByteDance's models (Doubao).",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "CCBot",
+    "pattern": "CCBot",
+    "order": 690,
+    "name": "CCBot",
+    "operator": "Common Crawl",
+    "purpose": "training",
+    "description": "Common Crawl, the open web archive most AI labs train on.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://index.commoncrawl.org/ccbot.json"
+    },
+    "docs": "https://commoncrawl.org/ccbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "CCBot/2.0 (https://commoncrawl.org/faq/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "cohere-training-data-crawler",
+    "pattern": "cohere-training-data-crawler|cohere-ai",
+    "order": 700,
+    "name": "Cohere",
+    "operator": "Cohere",
+    "purpose": "training",
+    "description": "Collects pages to train Cohere's models.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "cohere-training-data-crawler",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "DeepSeekBot",
+    "pattern": "DeepSeekBot",
+    "order": 710,
+    "name": "DeepSeekBot",
+    "operator": "DeepSeek",
+    "purpose": "training",
+    "description": "DeepSeek's crawler for its models.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; DeepSeekBot/1.0; +https://www.deepseek.com/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Qwenbot",
+    "pattern": "Qwenbot",
+    "order": 720,
+    "name": "Qwenbot",
+    "operator": "Alibaba",
+    "purpose": "training",
+    "description": "Alibaba's crawler for its Qwen models.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Qwenbot/1.0; +https://qwen.alibaba.com/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ChatGLM-Spider",
+    "pattern": "ChatGLM-Spider",
+    "order": 730,
+    "name": "ChatGLM-Spider",
+    "operator": "Zhipu AI",
+    "purpose": "training",
+    "description": "Zhipu AI's crawler for its GLM models.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ChatGLM-Spider/1.0; +https://zhipuai.cn/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "KimiBot",
+    "pattern": "KimiBot|MoonshotBot",
+    "order": 740,
+    "name": "KimiBot",
+    "operator": "Moonshot AI",
+    "purpose": "training",
+    "description": "Moonshot AI's crawler for its Kimi models.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.kimi.com/policies/kimibot.json"
+    },
+    "docs": "https://kimi.com/policies/kimi-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; KimiBot/1.0; +https://www.kimi.com/policies/kimi-crawlers",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "ElevenlabsCrawler",
+    "pattern": "ElevenlabsCrawler",
+    "order": 750,
+    "name": "ElevenlabsCrawler",
+    "operator": "ElevenLabs",
+    "purpose": "training",
+    "description": "ElevenLabs' crawler for its models and agents.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://elevenlabs.io/docs/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ElevenlabsCrawler/1.0; +https://elevenlabs.io/docs/bots)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "AI2Bot",
+    "pattern": "AI2Bot",
+    "order": 760,
+    "name": "AI2Bot",
+    "operator": "Ai2",
+    "purpose": "training",
+    "description": "Ai2's crawler for its open models and datasets (Dolma).",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://allenai.org/crawler",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "AhrefsBot",
+    "pattern": "AhrefsBot",
+    "order": 770,
+    "name": "AhrefsBot",
+    "operator": "Ahrefs",
+    "purpose": "tool",
+    "description": "Ahrefs' backlink and SEO index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://ahrefs.com/robot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "SemrushBot",
+    "pattern": "SemrushBot",
+    "order": 780,
+    "name": "SemrushBot",
+    "operator": "Semrush",
+    "purpose": "tool",
+    "description": "Semrush's backlink and SEO data.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.semrush.com/bot/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "SiteAuditBot",
+    "pattern": "SiteAuditBot",
+    "order": 790,
+    "name": "SiteAuditBot",
+    "operator": "Semrush",
+    "purpose": "tool",
+    "description": "Semrush Site Audit, run by a Semrush user.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.semrush.com/bot/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "MJ12bot",
+    "pattern": "MJ12bot",
+    "order": 800,
+    "name": "MJ12bot",
+    "operator": "Majestic",
+    "purpose": "tool",
+    "description": "Majestic's backlink index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://mj12bot.com/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "DotBot",
+    "pattern": "DotBot",
+    "order": 810,
+    "name": "DotBot",
+    "operator": "Moz",
+    "purpose": "tool",
+    "description": "Moz's link index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://moz.com/help/moz-procedures/crawlers/dotbot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "DataForSeoBot",
+    "pattern": "DataForSeoBot",
+    "order": 820,
+    "name": "DataForSeoBot",
+    "operator": "DataForSEO",
+    "purpose": "tool",
+    "description": "DataForSEO's backlink and SEO data APIs.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://dataforseo.com/dataforseo-bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; DataForSeoBot/1.0; +https://dataforseo.com/dataforseo-bot)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Screaming Frog SEO Spider",
+    "pattern": "Screaming Frog SEO Spider",
+    "order": 830,
+    "name": "Screaming Frog SEO Spider",
+    "operator": "Screaming Frog",
+    "purpose": "tool",
+    "description": "Screaming Frog, a desktop crawler run by an SEO.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.screamingfrog.co.uk/seo-spider/",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Screaming Frog SEO Spider/24.3",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "SERankingBacklinksBot",
+    "pattern": "SERanking",
+    "order": 840,
+    "name": "SERankingBacklinksBot",
+    "operator": "SE Ranking",
+    "purpose": "tool",
+    "description": "SE Ranking's backlink index.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://seranking.com/backlinks-crawler",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; SERankingBacklinksBot/1.0; +https://seranking.com/backlinks-crawler)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Scrunchbot",
+    "pattern": "Scrunchbot",
+    "order": 850,
+    "name": "Scrunchbot",
+    "operator": "Scrunch",
+    "purpose": "tool",
+    "description": "Scrunch's AI visibility monitoring.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://scrunchai.com/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Scrunchbot/1.0; +https://scrunchai.com/bots)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Qwairy-Bot",
+    "pattern": "Qwairy-Bot",
+    "order": 860,
+    "name": "Qwairy-Bot",
+    "operator": "Qwairy",
+    "purpose": "tool",
+    "description": "Qwairy's AI visibility monitoring.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Qwairy-Bot/1.0 (+https://qwairy.co)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "KimeBot",
+    "pattern": "KimeBot",
+    "order": 870,
+    "name": "KimeBot",
+    "operator": "KIME",
+    "purpose": "tool",
+    "description": "KIME's AI visibility monitoring.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; KimeBot/1.0; +https://kime.ai)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "AdsBot-Google",
+    "pattern": "AdsBot-Google",
+    "order": 880,
+    "name": "AdsBot-Google",
+    "operator": "Google",
+    "purpose": "ads",
+    "description": "Checks landing page quality for Google Ads.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/special-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "AdsBot-Google (+http://www.google.com/adsbot.html)",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "OAI-AdsBot",
+    "pattern": "OAI-AdsBot",
+    "order": 890,
+    "name": "OAI-AdsBot",
+    "operator": "OpenAI",
+    "purpose": "ads",
+    "description": "Checks landing pages for ChatGPT ads.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://openai.com/adsbot.json"
+    },
+    "docs": "https://platform.openai.com/docs/bots",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-AdsBot/1.0; +https://openai.com/adsbot",
+    "checked": "2026-10-28"
+  },
+  {
+    "token": "Googlebot-Image",
+    "pattern": "Googlebot-Image",
+    "order": 455,
+    "name": "Googlebot-Image",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Crawls images for Google Images, Discover and image features in Search.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "sampleUA": "Googlebot-Image/1.0",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Googlebot-Video",
+    "pattern": "Googlebot-Video",
+    "order": 456,
+    "name": "Googlebot-Video",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Crawls video for video features in Google Search.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "sampleUA": "Googlebot-Video/1.0",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Googlebot-News",
+    "pattern": "",
+    "order": 457,
+    "name": "Googlebot-News",
+    "operator": "Google",
+    "purpose": "seo",
+    "detectable": false,
+    "description": "Crawls for Google News and news.google.com, as Googlebot.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "sampleUA": "",
+    "checked": "2026-10-28",
+    "status": "documented"
+  },
+  {
+    "token": "GoogleOther",
+    "pattern": "GoogleOther",
+    "order": 458,
+    "name": "GoogleOther",
+    "operator": "Google",
+    "purpose": "seo",
+    "description": "Google's generic crawler for product teams and research.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    },
+    "docs": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GoogleOther) Chrome/131.0.0.0 Safari/537.36",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Slurp",
+    "pattern": "Slurp",
+    "order": 535,
+    "name": "Yahoo Slurp",
+    "operator": "Yahoo",
+    "purpose": "seo",
+    "description": "Yahoo Search crawler.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://help.yahoo.com/kb/SLN22600.html",
+    "sampleUA": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Diffbot-User",
+    "pattern": "Diffbot-User",
+    "order": 135,
+    "name": "Diffbot-User",
+    "operator": "Diffbot",
+    "purpose": "user",
+    "description": "Diffbot fetching a page because a person asked it to.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
+    "sampleUA": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 (compatible; Diffbot-User/1.0; +https://www.diffbot.com)",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Diffbot",
+    "pattern": "Diffbot",
+    "order": 345,
+    "name": "Diffbot",
+    "operator": "Diffbot",
+    "purpose": "search",
+    "description": "Builds Diffbot's Knowledge Graph and web data, sold to AI products.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
+    "sampleUA": "Diffbot",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "bedrockbot",
+    "pattern": "bedrockbot|amazon-bedrock-knowledgebase",
+    "order": 305,
+    "name": "Amazon Bedrock crawlers",
+    "operator": "Amazon",
+    "purpose": "search",
+    "description": "Crawls pages for Amazon Bedrock knowledge bases a company sets up.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://docs.aws.amazon.com/bedrock/latest/userguide/webcrawl-data-source-connector.html",
+    "sampleUA": "bedrockbot",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "MistralAI-Training",
+    "pattern": "MistralAI-Training",
+    "order": 675,
+    "name": "MistralAI-Training",
+    "operator": "Mistral",
+    "purpose": "training",
+    "description": "Collects pages for Mistral's training datasets.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://docs.mistral.ai/robots",
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Training/1.0; +https://docs.mistral.ai/robots)",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  },
+  {
+    "token": "Meta-ExternalAds",
+    "pattern": "meta-externalads",
+    "order": 885,
+    "name": "Meta-ExternalAds",
+    "operator": "Meta",
+    "purpose": "ads",
+    "description": "Meta's crawler for its ads and business products.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+    "sampleUA": "meta-externalads/1.1",
+    "checked": "2026-10-28",
+    "status": "documented",
+    "detectable": true
+  }
+]

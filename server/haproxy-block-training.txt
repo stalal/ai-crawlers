@@ -1,0 +1,17 @@
+GPTBot
+ClaudeBot
+anthropic-ai
+meta-externalagent
+Amazonbot
+MistralAI-Training
+Bytespider
+CCBot
+cohere-training-data-crawler
+cohere-ai
+DeepSeekBot
+Qwenbot
+ChatGLM-Spider
+KimiBot
+MoonshotBot
+ElevenlabsCrawler
+AI2Bot

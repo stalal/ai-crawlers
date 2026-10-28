@@ -1,0 +1,37 @@
+[
+  {
+    "myth": "Blocking GPTBot keeps your site out of ChatGPT",
+    "fact": "GPTBot only collects training data. ChatGPT search uses OAI-SearchBot and live answers use ChatGPT-User, each with its own robots.txt token. A GPTBot rule touches neither.",
+    "source": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+    "myth": "robots.txt stops ChatGPT-User from opening your pages",
+    "fact": "OpenAI says robots.txt rules may not apply to ChatGPT-User, because a person asked for the page. Perplexity-User and Meta-ExternalFetcher work the same way.",
+    "source": "https://developers.openai.com/api/docs/bots"
+  },
+  {
+    "myth": "Blocking Google-Extended hurts you in Google Search",
+    "fact": "Google says Google-Extended doesn't affect inclusion or ranking in Search. It controls Gemini training and Gemini grounding, not AI Overviews or AI Mode.",
+    "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+  },
+  {
+    "myth": "No Google-Extended hits in your logs means the block failed",
+    "fact": "Google-Extended sends no requests of its own. Google crawls with Googlebot and reads the token from robots.txt, so a server or CDN rule on that user agent blocks nothing.",
+    "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+  },
+  {
+    "myth": "anthropic-ai and Claude-Web are Anthropic's crawlers",
+    "fact": "Anthropic's docs list only ClaudeBot, Claude-SearchBot and Claude-User. Rules for the old names don't reach any current Claude crawler.",
+    "source": "https://support.claude.com/en/articles/8896518"
+  },
+  {
+    "myth": "Anthropic doesn't publish IP addresses for its bots",
+    "fact": "It does, at claude.com/crawling/bots.json. A request from an address on that list is from Anthropic.",
+    "source": "https://support.claude.com/en/articles/8896518"
+  },
+  {
+    "myth": "Google-NotebookLM is the token for NotebookLM",
+    "fact": "It's now Google-GeminiNotebook. Rules for the old name stop working once Google drops it.",
+    "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers"
+  }
+]
