@@ -17,6 +17,8 @@ User-agent: ChatGLM-Spider
 User-agent: KimiBot
 User-agent: ElevenlabsCrawler
 User-agent: AI2Bot
+User-agent: PostHogImageFetcherBot
+User-agent: RiverBot
 Disallow: /
 
 User-agent: *

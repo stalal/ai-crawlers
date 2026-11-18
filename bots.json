@@ -1879,5 +1879,309 @@
     "checked": "2026-10-28",
     "status": "documented",
     "detectable": true
+  },
+  {
+    "token": "AhrefsSiteAudit",
+    "pattern": "AhrefsSiteAudit",
+    "order": 900,
+    "name": "AhrefsSiteAudit",
+    "operator": "Ahrefs",
+    "purpose": "tool",
+    "description": "Ahrefs' Site Audit, crawling a site when an Ahrefs user audits it.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://ahrefs.com/robot/site-audit",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; AhrefsSiteAudit/6.1; +http://ahrefs.com/robot/site-audit)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "Sogou web spider",
+    "pattern": "Sogou web spider",
+    "order": 905,
+    "name": "Sogou web spider",
+    "operator": "Sogou",
+    "purpose": "seo",
+    "description": "Sogou's web search index (China).",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.sogou.com/docs/help/webmasters.htm",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "Barkrowler",
+    "pattern": "Barkrowler",
+    "order": 910,
+    "name": "Barkrowler",
+    "operator": "Babbar",
+    "purpose": "tool",
+    "description": "Babbar's link graph for its SEO tools.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://babbar.tech/crawler",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; Barkrowler/0.9; +https://babbar.tech/crawler)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "ibou-search",
+    "pattern": "ibou-search",
+    "order": 915,
+    "name": "ibou-search",
+    "operator": "ibou",
+    "purpose": "seo",
+    "description": "The page index for ibou's search engine (France).",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.ibou.com/ibousearch-ip-ranges.json"
+    },
+    "docs": "https://www.ibou.com/crawlers.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ibou-search/2.0; +https://www.ibou.com/crawlers.html)",
+    "checked": "2026-11-19"
+  },
+  {
+    "token": "ibou-discovery",
+    "pattern": "ibou-discovery",
+    "order": 916,
+    "name": "ibou-discovery",
+    "operator": "ibou",
+    "purpose": "seo",
+    "description": "Collects articles for ibou Découverte, the French search engine's discovery feed.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.ibou.com/iboumedia-ip-ranges.json"
+    },
+    "docs": "https://www.ibou.com/crawlers.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ibou-discovery/2.0; +https://www.ibou.com/crawlers.html)",
+    "checked": "2026-11-19"
+  },
+  {
+    "token": "ibou-news",
+    "pattern": "ibou-news",
+    "order": 917,
+    "name": "ibou-news",
+    "operator": "ibou",
+    "purpose": "seo",
+    "description": "Collects articles for ibou Actualités, the French search engine's news.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://www.ibou.com/iboumedia-ip-ranges.json"
+    },
+    "docs": "https://www.ibou.com/crawlers.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ibou-news/2.0; +https://www.ibou.com/crawlers.html)",
+    "checked": "2026-11-19"
+  },
+  {
+    "token": "ibou-images",
+    "pattern": "ibou-images",
+    "order": 918,
+    "name": "ibou-images",
+    "operator": "ibou",
+    "purpose": "seo",
+    "description": "Finds and catalogues images for ibou's search engine (France). No address list yet.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://www.ibou.com/crawlers.html",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; ibou-images/2.0; +https://www.ibou.com/crawlers.html)",
+    "checked": "2026-11-19"
+  },
+  {
+    "token": "PeecAudit",
+    "pattern": "PeecAudit",
+    "order": 920,
+    "name": "PeecAudit",
+    "operator": "Peec AI",
+    "purpose": "tool",
+    "description": "Peec AI's Agent Readiness check, requesting pages the way AI agents do.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://docs.peec.ai/agent-readiness",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "PeecAudit/1.0 (+https://peec.ai)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "PostHogImageFetcherBot",
+    "pattern": "PostHogImageFetcherBot",
+    "order": 925,
+    "name": "PostHogImageFetcherBot",
+    "operator": "PostHog",
+    "purpose": "training",
+    "description": "Downloads images that PostHog session recordings refer to, to train PostHog's AI models.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://posthog.com/docs/ai-research/image-fetcher-bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "PostHogImageFetcherBot/1.0 (+https://posthog.com/docs/ai-research/image-fetcher-bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "KeenableBot",
+    "pattern": "KeenableBot",
+    "order": 930,
+    "name": "KeenableBot",
+    "operator": "Keenable",
+    "purpose": "search",
+    "description": "Keenable's search index, which answers queries from AI agents and cites the page.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://keenable.ai/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; KeenableBot/1.0; +https://keenable.ai/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "Keenable-User",
+    "pattern": "Keenable-User",
+    "order": 935,
+    "name": "Keenable-User",
+    "operator": "Keenable",
+    "purpose": "user",
+    "description": "Keenable fetching a page live for an AI agent's request.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "https://keenable.ai/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Keenable-User/1.0; +https://keenable.ai/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "RiverBot",
+    "pattern": "RiverBot",
+    "order": 940,
+    "name": "RiverBot",
+    "operator": "River",
+    "purpose": "training",
+    "description": "River's crawler, collecting pages to train and evaluate its AI models.",
+    "robotsTxt": "respects",
+    "verify": {
+      "method": "ip-json",
+      "url": "https://river.ai/riverbot.json"
+    },
+    "docs": "https://river.ai/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "RiverBot/1.0 (+https://river.ai/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "SofyaBot",
+    "pattern": "SofyaBot",
+    "order": 945,
+    "name": "SofyaBot",
+    "operator": "Sofya",
+    "purpose": "search",
+    "description": "Sofya's own search index (search.sofya.co).",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "reverse-dns",
+      "url": ""
+    },
+    "docs": "https://sofya.co/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "SofyaBot/1.0 (+https://sofya.co/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "KamataBot",
+    "pattern": "KamataBot",
+    "order": 950,
+    "name": "KamataBot",
+    "operator": "Kamata",
+    "purpose": "tool",
+    "description": "Kamata's company data for B2B research: what a business publishes about itself.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "signature",
+      "url": ""
+    },
+    "docs": "https://api.kamata.ai/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; KamataBot/1.0; +https://api.kamata.ai/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "OraBot",
+    "pattern": "OraBot",
+    "order": 955,
+    "name": "OraBot",
+    "operator": "Ora",
+    "purpose": "tool",
+    "description": "Ora's scanner, scoring how ready a site is for AI agents when someone asks for a score.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "signature",
+      "url": ""
+    },
+    "docs": "https://ora.ai/bot",
+    "status": "documented",
+    "detectable": true,
+    "sampleUA": "OraBot/1.0 (+https://ora.ai/bot)",
+    "checked": "2026-11-18"
+  },
+  {
+    "token": "CrolBot",
+    "pattern": "CrolBot",
+    "order": 960,
+    "name": "CrolBot",
+    "operator": "cloro",
+    "purpose": "tool",
+    "description": "cloro's crawler. cloro sells an API of Google and AI search results; it documents no bot page.",
+    "robotsTxt": "unknown",
+    "verify": {
+      "method": "none",
+      "url": ""
+    },
+    "docs": "",
+    "status": "undocumented",
+    "detectable": true,
+    "sampleUA": "Mozilla/5.0 (compatible; CrolBot/0.1; +https://cloro.dev)",
+    "checked": "2026-11-18"
   }
 ]

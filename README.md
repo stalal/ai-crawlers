@@ -51,7 +51,7 @@ Open a pull request that changes `bots.json` and links the operator's own page f
 
 <!-- table:start -->
 
-### Search engines (21)
+### Search engines (26)
 
 Build search indexes. Google's and Bing's also feed their AI answers.
 
@@ -78,8 +78,13 @@ Build search indexes. Google's and Bing's also feed their AI answers.
 | [Yahoo Japan (Y!J)](https://support.yahoo-net.jp/PccSearch/s/article/H000007955) | LY Corporation (Yahoo Japan) | Yahoo! JAPAN Search crawler. | unknown |
 | [coccocbot](http://help.coccoc.com/searchengine) | Coc Coc | Coc Coc Search crawler (Vietnam). | respects |
 | [Kagibot](https://kagi.com/bot) | Kagi | Kagi Search's own index crawler. | respects |
+| [Sogou web spider](https://www.sogou.com/docs/help/webmasters.htm) | Sogou | Sogou's web search index (China). | unknown |
+| [ibou-search](https://www.ibou.com/crawlers.html) | ibou | The page index for ibou's search engine (France). | respects |
+| [ibou-discovery](https://www.ibou.com/crawlers.html) | ibou | Collects articles for ibou Découverte, the French search engine's discovery feed. | respects |
+| [ibou-news](https://www.ibou.com/crawlers.html) | ibou | Collects articles for ibou Actualités, the French search engine's news. | respects |
+| [ibou-images](https://www.ibou.com/crawlers.html) | ibou | Finds and catalogues images for ibou's search engine (France). No address list yet. | respects |
 
-### AI search (21)
+### AI search (23)
 
 Build the indexes AI search engines and search APIs answer from.
 
@@ -106,8 +111,10 @@ Build the indexes AI search engines and search APIs answer from.
 | [ShapBot](https://docs.parallel.ai/resources/crawler) | Parallel | Crawler for Parallel's search API for AI agents. | respects |
 | [YouBot](https://docs.you.com/youbot) | You.com | Crawler for You.com search and its search API. | respects |
 | Bravebot | Brave | Crawler for Brave Search, its AI answers and the Brave Search API. | unknown |
+| [KeenableBot](https://keenable.ai/bot) | Keenable | Keenable's search index, which answers queries from AI agents and cites the page. | respects |
+| [SofyaBot](https://sofya.co/bot) | Sofya | Sofya's own search index (search.sofya.co). | unknown |
 
-### Live fetch (27)
+### Live fetch (28)
 
 Open a page when someone asks an assistant or agent to.
 
@@ -140,8 +147,9 @@ Open a page when someone asks an assistant or agent to.
 | Trae | ByteDance | ByteDance's coding IDE agent, fetching docs for a developer. | unknown |
 | OpenCode | Anomaly | Open-source coding agent, fetching docs for a developer. | unknown |
 | qodercli | Alibaba (Qoder) | Alibaba's Qoder CLI coding agent, fetching docs for a developer. | unknown |
+| [Keenable-User](https://keenable.ai/bot) | Keenable | Keenable fetching a page live for an AI agent's request. | unknown |
 
-### Training (16)
+### Training (18)
 
 Collect pages to train models.
 
@@ -163,8 +171,10 @@ Collect pages to train models.
 | [KimiBot](https://kimi.com/policies/kimi-crawlers) | Moonshot AI | Moonshot AI's crawler for its Kimi models. | respects |
 | [ElevenlabsCrawler](https://elevenlabs.io/docs/bots) | ElevenLabs | ElevenLabs' crawler for its models and agents. | respects |
 | [AI2Bot](https://allenai.org/crawler) | Ai2 | Ai2's crawler for its open models and datasets (Dolma). | respects |
+| [PostHogImageFetcherBot](https://posthog.com/docs/ai-research/image-fetcher-bot) | PostHog | Downloads images that PostHog session recordings refer to, to train PostHog's AI models. | unknown |
+| [RiverBot](https://river.ai/bot) | River | River's crawler, collecting pages to train and evaluate its AI models. | respects |
 
-### SEO and AI visibility tools (11)
+### SEO and AI visibility tools (17)
 
 Third-party crawlers for SEO and AI visibility data.
 
@@ -181,6 +191,12 @@ Third-party crawlers for SEO and AI visibility data.
 | [Scrunchbot](https://scrunchai.com/bots) | Scrunch | Scrunch's AI visibility monitoring. | respects |
 | Qwairy-Bot | Qwairy | Qwairy's AI visibility monitoring. | unknown |
 | KimeBot | KIME | KIME's AI visibility monitoring. | unknown |
+| [AhrefsSiteAudit](https://ahrefs.com/robot/site-audit) | Ahrefs | Ahrefs' Site Audit, crawling a site when an Ahrefs user audits it. | unknown |
+| [Barkrowler](https://babbar.tech/crawler) | Babbar | Babbar's link graph for its SEO tools. | respects |
+| [PeecAudit](https://docs.peec.ai/agent-readiness) | Peec AI | Peec AI's Agent Readiness check, requesting pages the way AI agents do. | unknown |
+| [KamataBot](https://api.kamata.ai/bot) | Kamata | Kamata's company data for B2B research: what a business publishes about itself. | unknown |
+| [OraBot](https://ora.ai/bot) | Ora | Ora's scanner, scoring how ready a site is for AI agents when someone asks for a score. | unknown |
+| CrolBot | cloro | cloro's crawler. cloro sells an API of Google and AI search results; it documents no bot page. | unknown |
 
 ### Ads checks (3)
 

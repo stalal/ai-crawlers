@@ -15,3 +15,5 @@ KimiBot
 MoonshotBot
 ElevenlabsCrawler
 AI2Bot
+PostHogImageFetcherBot
+RiverBot
